@@ -25,6 +25,12 @@ parser.add_argument(
     '--n900_first_db', '-n900f',
     help='path to our output sqlite file',
     required=True)
+parser.add_argument(
+    '--prefix', '-p', help="""international prefix for\
+     your country's phone number""", required=False)
+parser.add_argument('--valid_phone_number_regex', '-vnum',
+                    help="""a regex describing a\
+                     valid phone number in your country""", required=False)
 args = parser.parse_args()
 
 if args.n900_last_db:

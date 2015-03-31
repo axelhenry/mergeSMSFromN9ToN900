@@ -29,7 +29,7 @@ class N900SMSHandler:
 
     def _getDataFromSMSTuple(self, aSMS):
         data = {}
-        data['telno'] = utilities.normalizePhoneNumber(aSMS[13])
+        data['telno'] = utilities.normalizePhoneNumber('+33', aSMS[13])
         # data['body'] = aSMS[15].replace("\r\n", "\n").rstrip('\n')
         data['body'] = aSMS[15]
         data['date'] = arrow.get(aSMS[3])

@@ -26,7 +26,7 @@ class N9SMSHandler:
                 self._myLastDate = max(self._myLastDate, myData['date'])
                 if myData['telno']:
                     myData['telno'] = utilities.normalizePhoneNumber(
-                        myData['telno'])
+                        '+33', myData['telno'])
                     myData['body'] = myData['body'].replace(
                         "\r\n", "\n").rstrip('\n')
                     self._mySMS[
